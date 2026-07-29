@@ -276,3 +276,10 @@ GROUP BY
         ELSE '500+' 
     END
 ORDER BY total_orders DESC;
+-- Rating Count Distribution (1-5)
+SELECT 
+    rating,
+    COUNT(*) AS rating_count
+FROM fact_swiggy_orders
+GROUP BY rating
+ORDER BY rating_count DESC;
